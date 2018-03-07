@@ -3,10 +3,6 @@ import java.io.*;
 import java.math.*;
 import java.util.LinkedList;
 
-/**
- * Auto-generated code below aims at helping you parse
- * the standard input according to the problem statement.
- **/
 class Solution {
     private final static String LOG = "Log > ";
     private final static String PLAYER_ONE = "1 ";
@@ -35,13 +31,11 @@ class Solution {
         
         System.err.println(LOG + "1st Player Cards: " + cardsOnePlayer);
         System.err.println(LOG + "2nd Player Cards: " + cardsTwoPlayer);
-
-        // Write an action using System.out.println()
-        // To debug: System.err.println("Debug messages...");
-        List<Integer> warListOne = new ArrayList<>();
-        List<Integer> warListTwo = new ArrayList<>();
         
         while(!isGameOver){
+            List<Integer> warListOne = new ArrayList<>();
+            List<Integer> warListTwo = new ArrayList<>();
+            
             int oneCard = cardsOnePlayer.get(0);
             int twoCard = cardsTwoPlayer.get(0);
             
@@ -77,7 +71,6 @@ class Solution {
                 isGameOver = true;
             }
         }
-    
         System.out.println(winner + gameTurns);
     }
     
